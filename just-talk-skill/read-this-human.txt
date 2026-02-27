@@ -1,0 +1,1 @@
+To use the skill, copy the just-talk folder to your .claude/skills folder, or just ask your AI to follow the instructions in SETUP.md; Works with Claude, ChatGPT, Gemini, and more!
