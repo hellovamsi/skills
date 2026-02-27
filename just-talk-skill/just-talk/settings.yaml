@@ -1,0 +1,25 @@
+# just-talk skill settings
+
+# Set to true on first run. The skill will run setup and flip this to false.
+first_run: true
+
+# Which mode controls when to stop asking questions.
+# Options: turn_based | semantic
+mode: semantic
+
+turn_based:
+  # Stop after this many question-asking turns.
+  max_turns: 3
+
+semantic:
+  # Starting number of turns before concluding.
+  # Adjusts dynamically based on response length trends.
+  starting_turns: 3
+
+# Tone of the conversation.
+# Options: chatty | freud | bob
+tone: chatty
+
+# Whether to show the status line at the bottom of each reply.
+# Options: true | false
+show_status_line: true
