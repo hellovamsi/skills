@@ -23,3 +23,9 @@ tone: chatty
 # Whether to show the status line at the bottom of each reply.
 # Options: true | false
 show_status_line: true
+
+# test-me session settings
+test_me:
+  # Total session duration in minutes.
+  # Options: 15 | 30 | 45
+  session_duration: 30

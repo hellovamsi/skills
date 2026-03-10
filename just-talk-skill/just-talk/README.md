@@ -84,6 +84,36 @@ It shows the active tone, and once confirmed, the project and company. Set `show
 
 ---
 
+## test-me — Practice Mode
+
+Run a timed mock interview against your own filed stories:
+
+```
+/just-talk test-me
+/just-talk test-me mentorship
+/just-talk test-me cross-functional collaboration
+```
+
+With no argument, Claude picks a focus area using round-robin rotation. With an argument, Claude validates it as a behavioural interview category and focuses the session on it.
+
+**What it does:**
+- Asks questions like an interviewer — formal, direct, no follow-ups
+- Times each answer (raw timestamps + duration recorded)
+- Silently evaluates every answer against STAR format, factuality, coherence, contradiction, and more — nothing is shown during the interview
+- Ends the session when the configured time limit is reached
+- Produces a per-question breakdown and an overall session summary with a Top 3 priorities list
+- Saves the evaluation to `career-stories/evaluations/`
+
+**Important:** test-me is read-only. It does not update your stories or project files. To add new material, run `/just-talk` in classic mode.
+
+**Session duration** is set in `settings.yaml` under `test_me.session_duration`. Options: `15`, `30`, `45` (default: `30`).
+
+**Question pool** is built from `interview-questions.md` plus any questions in `answers_interview_questions` across all project YAMLs. Classic mode generates new questions when filing stories, so the pool grows automatically over time.
+
+**Round-robin state** is tracked in `career-stories/evaluations/state.yaml`. This file records which questions have been asked, when, and how many times — ensuring you get broad coverage across sessions.
+
+---
+
 ## Customising the Hint Questions
 
 Edit `interview-questions.md` to add, remove, or reorganise the prompts shown at the start of each session. The skill picks 3 at random, spread across categories.
