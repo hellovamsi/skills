@@ -1,2 +1,16 @@
 # FreeFileSync database files
 just-talk-skill/.sync.ffs_db
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
